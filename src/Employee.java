@@ -1,4 +1,4 @@
-public class Employee {
+public class Employee implements Comparable<Employee> {
     private int id;
     private String name;
     public Employee(int id, String name) {
@@ -15,5 +15,10 @@ public class Employee {
     @Override
     public String toString() {
         return "Employee{" + "id=" + id + ", name='" + name + '\'' + '}';
+    }
+
+    @Override
+    public int compareTo(Employee o) {
+        return this.id-o.id;
     }
 }
