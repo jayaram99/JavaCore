@@ -1,8 +1,11 @@
 package lamdas.demo3;
 
+import java.time.LocalDate;
 import java.util.Scanner;
+import java.util.function.Consumer;
 import java.util.function.Function;
 import java.util.function.Predicate;
+import java.util.function.Supplier;
 
 public class Main {
     public static void main(String[] args) {
@@ -41,10 +44,27 @@ public class Main {
         Function<Integer,Boolean> operation2 = a -> a>=0;
         System.out.println(operation2.apply(n1));
 
-        // 2. Predicate<Input Type>
+        // 2. Predicate<Input Type> returns a boolean
         // Use the function test() provided in that interface after writing our lambda expr
         int n2 = -1;
         Predicate<Integer> predicate = a -> a>=0;
         System.out.println(predicate.test(n2));
+
+        // 3. Consumer<Input Type> returns nothing
+        // Use the function accept() provided in that interface after writing our lambda expr
+        Consumer<Integer> consumer = a -> System.out.println("Negative value:" +a);
+        consumer.accept(n2);
+
+        // 4. Supplier<Return Type> does not take any input but returns whatever we specify
+        // Use the function get() provided in that interface after writing our lambda expr
+        Supplier<LocalDate> supplier = () -> LocalDate.now();
+        System.out.println(supplier.get());
+
+        // In the above FIs they take only one input
+        // We can provide 2 inputs as well
+        // use Bi infront of the FIs
+        // BiFunction, BiPredicate, BiConsumer,
+        // The functions are the same apply(), test(), accept()
+
     }
 }
