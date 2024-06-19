@@ -1,3 +1,5 @@
+package Collections;
+
 import java.util.*;
 
 public class Main {
@@ -5,7 +7,15 @@ public class Main {
         System.out.println("Hello world!");
 
         // Demo for Collection Classes
-        // List basic methods i. add ii. set iii. remove
+        // arrayList basic methods i. add ii. set iii. remove
+
+        // LinkedList is almost same but adding is faster in LL
+        // Because LL doesn't need a sequence of memory it can store each ele anywhere and connect with addr
+        // Whereas Array needs a sequence in memory to store
+
+        // ArrayList is faster in accessing
+        // Because each ele is stored in a sequence
+
 
         List<Integer> arrayList = new ArrayList<>();
         arrayList.add(1);

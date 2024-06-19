@@ -1,3 +1,5 @@
+package Collections;
+
 public class Employee implements Comparable<Employee> {
     private int id;
     private String name;
@@ -14,7 +16,7 @@ public class Employee implements Comparable<Employee> {
 
     @Override
     public String toString() {
-        return "Employee{" + "id=" + id + ", name='" + name + '\'' + '}';
+        return "Collections.Employee{" + "id=" + id + ", name='" + name + '\'' + '}';
     }
 
     @Override
